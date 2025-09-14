@@ -1,0 +1,17 @@
+def chatbot():
+    responses = {
+        "Hello": "Hi!",
+        "How are you": "I am fine!",
+        "Bye": "Goodbye!"
+    }
+
+    print("Chatbot: Type something (type 'exit' to quit)")
+    while True:
+        user_input = input("You: ").lower()
+        if user_input == "exit":
+            print("Chatbot: Goodbye!")
+            break
+        reply = responses.get(user_input, "Sorry, I do not understand.")
+        print("Chatbot:", reply)
+
+chatbot()
